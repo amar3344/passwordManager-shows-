@@ -1,0 +1,43 @@
+.passwords-item {
+  display: flex;
+  align-items: center;
+}
+
+.left-container {
+}
+
+.websiteInitial {
+  font-size: 10px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.mid-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  font-size: 10px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.delete-container {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.delete-button {
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+}

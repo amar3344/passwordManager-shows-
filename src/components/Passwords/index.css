@@ -1,0 +1,217 @@
+.container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-container {
+  width: 250px;
+  height: 100%;
+  background-color: #9ba9eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.logo-image {
+  width: 120px;
+  height: 35px;
+  background-size: cover;
+}
+
+.top-card-container {
+  width: 100%;
+  background-color: #5763a5;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.password-manger-logo {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+
+.form-container {
+  width: 100%;
+  background-color: #454f84;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 10px;
+}
+
+.heading {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Roboto';
+  color: #ffffff;
+}
+
+.input-containers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.input-images {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  margin-right: 2px;
+}
+
+.horizontal-line {
+  border: 1px solid #b6c3ca;
+  height: 20px;
+  margin-right: 2px;
+}
+
+.input-elements {
+  border: none;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.add-button {
+  font-size: 12px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #0b69ff;
+  width: 65px;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+
+.bottom-container {
+  width: 100%;
+  background-color: #5763a5;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.search-passwords-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-of-passwords {
+  font-size: 10px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.passwords-length {
+  width: 20px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  font-size: 10px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.search-input-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.search-image {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
+
+.input-search {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.horizontal-line-bottom-container {
+  width: 100%;
+  border: 1px solid #ffffff;
+}
+
+.show-password-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.checkbox {
+  width: 10px;
+  height: 10px;
+}
+
+.show-passwords {
+  font-size: 10px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.no-passwords-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border: none;
+}
+
+.no-passwords-text {
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+}
+
+.passwords-list-container {
+  list-style-type: none;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
