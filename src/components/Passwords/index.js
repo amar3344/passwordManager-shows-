@@ -16,7 +16,7 @@ class Passwords extends Component {
 
   addPasswordByClick = event => {
     event.preventDefault()
-    const {passwordsList, website, username, password} = this.state
+    const {website, username, password} = this.state
 
     const addNewPassword = {
       id: uuidv4,
@@ -41,19 +41,16 @@ class Passwords extends Component {
     )
   }
 
-  getEmptyList = () => {
-    const {passwordsList} = this.state
-    return (
-      <div className="empty-passwords-container">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
-          alt="no passwords"
-          className="no-passwords-image"
-        />
-        <p className="no-passwords-text">No Passwords</p>
-      </div>
-    )
-  }
+  getEmptyList = () => (
+    <div className="empty-passwords-container">
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
+        alt="no passwords"
+        className="no-passwords-image"
+      />
+      <p className="no-passwords-text">No Passwords</p>
+    </div>
+  )
 
   getWebsiteInput = event => {
     this.setState({website: event.target.value})
@@ -127,7 +124,7 @@ class Passwords extends Component {
                 />
                 <hr className="horizontal-line" />
                 <input
-                  type="text"
+                  type="password"
                   value={password}
                   placeholder="Enter Password"
                   className="input-elements"
