@@ -67,6 +67,8 @@ class Passwords extends Component {
   render() {
     const {passwordsList} = this.state
     const {website, username, password} = passwordsList
+    const list =
+      passwordsList.length === 0 ? this.getEmptyList : this.getNonEmptyList
 
     return (
       <div className="container">
@@ -94,7 +96,7 @@ class Passwords extends Component {
                 />
                 <hr className="horizontal-line" />
                 <input
-                  type="text"
+                  type="website"
                   value={website}
                   placeholder="Enter Website"
                   className="input-elements"
@@ -163,11 +165,7 @@ class Passwords extends Component {
                 Show Passwords
               </label>
             </div>
-            <div>
-              {passwordsList.length !== 0
-                ? this.getNonEmptyList()
-                : this.getEmptyList()}
-            </div>
+            <div>{list}</div>
           </div>
         </div>
       </div>

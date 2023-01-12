@@ -2,7 +2,8 @@ import './index.css'
 
 const PasswordItem = props => {
   const {passwordDetails} = props
-  const {id, website, username, password} = passwordDetails
+  console.log(passwordDetails)
+  const {website, username, password} = passwordDetails
   const websiteInitial = website.slice(0, 1).toUpper()
 
   return (
