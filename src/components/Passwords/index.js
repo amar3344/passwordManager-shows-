@@ -30,8 +30,11 @@ class Passwords extends Component {
     }))
   }
 
+  getPasswords = () => {}
+
   getNonEmptyList = () => {
-    const {passwordsList} = this.state
+    const {passwordsList, isShowPasswords} = this.state
+    const showPassword = isShowPasswords ? this.getPasswords() : null
     return (
       <ul className="passwords-list-container">
         {passwordsList.map(eachPassword => (
@@ -61,15 +64,18 @@ class Passwords extends Component {
   }
 
   getPasswordInput = event => {
-    this.setState({password: event.target.value})
+    const {isShowPasswords} = this.state
+    const passwordShow = isShowPasswords
+      ? this.setState({password: event.target.value})
+      : null
+    return passwordShow
   }
 
   render() {
     const {passwordsList} = this.state
     const {website, username, password} = passwordsList
     const list =
-      passwordsList.length === 0 ? this.getEmptyList : this.getNonEmptyList
-
+      passwordsList.length === 0 ? this.getEmptyList() : this.getNonEmptyList()
     return (
       <div className="container">
         <div className="bg-container">
@@ -141,7 +147,7 @@ class Passwords extends Component {
           <div className="bottom-container">
             <div className="search-passwords-container">
               <div className="password-container">
-                <p className="no-of-passwords">Your Passwords</p>
+                <h1 className="no-of-passwords">Your Passwords</h1>
                 <p className="passwords-length">{passwordsList.length}</p>
               </div>
               <div className="search-input-container">

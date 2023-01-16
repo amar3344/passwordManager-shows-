@@ -1,25 +1,32 @@
 .passwords-item {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
 }
 
 .left-container {
+  display: flex;
+  align-items: center;
 }
 
 .websiteInitial {
-  font-size: 10px;
+  font-size: 13px;
   font-family: 'Roboto';
   font-weight: bold;
-  padding: 5px;
-  width: 20px;
-  height: 20px;
-  border-radius: 5px;
+  border-radius: 50%;
   text-align: center;
+  background-color: #0b69ff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .mid-container {
   display: flex;
   flex-direction: column;
+  padding: 10px 10px;
 }
 
 .text {
@@ -27,6 +34,7 @@
   font-family: 'Roboto';
   font-weight: 500;
   color: #ffffff;
+  margin: 0px;
 }
 
 .delete-container {

@@ -4,7 +4,7 @@ const PasswordItem = props => {
   const {passwordDetails} = props
   console.log(passwordDetails)
   const {website, username, password} = passwordDetails
-  const websiteInitial = website.slice(0, 1).toUpper()
+  const websiteInitial = website.slice(0, 1).toUpperCase()
 
   return (
     <li className="passwords-item">
