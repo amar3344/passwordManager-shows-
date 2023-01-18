@@ -2,6 +2,9 @@
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
+  border: 1px solid #ffffff;
+  margin: 10px 0px;
+  padding: 10px;
 }
 
 .left-container {

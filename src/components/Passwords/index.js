@@ -27,18 +27,29 @@ class Passwords extends Component {
 
     this.setState(prevState => ({
       passwordsList: [...prevState.passwordsList, addNewPassword],
+      website: '',
+      username: '',
+      password: '',
     }))
   }
 
-  getPasswords = () => {}
+  clickDelete = id => {
+    const {passwordsList} = this.state
+    console.log(passwordsList, id)
+    // this.setState({passwordsList: passwordsList.filter(item => item.id !== id)})
+  }
 
   getNonEmptyList = () => {
     const {passwordsList, isShowPasswords} = this.state
-    const showPassword = isShowPasswords ? this.getPasswords() : null
     return (
       <ul className="passwords-list-container">
         {passwordsList.map(eachPassword => (
-          <PasswordItem key={eachPassword.id} passwordDetails={eachPassword} />
+          <PasswordItem
+            key={eachPassword.id}
+            passwordDetails={eachPassword}
+            displayPassword={isShowPasswords}
+            onClickDelete={this.clickDelete}
+          />
         ))}
       </ul>
     )
@@ -64,11 +75,11 @@ class Passwords extends Component {
   }
 
   getPasswordInput = event => {
-    const {isShowPasswords} = this.state
-    const passwordShow = isShowPasswords
-      ? this.setState({password: event.target.value})
-      : null
-    return passwordShow
+    this.setState({password: event.target.value})
+  }
+
+  makeDisplayPasswords = () => {
+    this.setState(prevState => ({isShowPasswords: !prevState}))
   }
 
   render() {
@@ -166,7 +177,12 @@ class Passwords extends Component {
             </div>
             <hr className="horizontal-line-bottom-container" />
             <div className="show-password-container">
-              <input type="checkbox" id="checkbox" className="checkbox" />
+              <input
+                type="checkbox"
+                id="checkbox"
+                className="checkbox"
+                onClick={this.makeDisplayPasswords}
+              />
               <label className="show-passwords" htmlFor="checkbox">
                 Show Passwords
               </label>

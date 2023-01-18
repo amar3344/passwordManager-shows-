@@ -214,5 +214,5 @@
 .passwords-list-container {
   list-style-type: none;
   background-color: transparent;
-  border: 1px solid #ffffff;
+  padding: 0px;
 }
