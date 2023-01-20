@@ -12,6 +12,37 @@ class Passwords extends Component {
     username: '',
     password: '',
     isShowPasswords: false,
+    searchInput: '',
+  }
+
+  gettingSearchPasswords = () => {
+    const {passwordsList, searchInput} = this.state
+    const isIncludesPasswordList = passwordsList.map(item =>
+      item.password.includes(searchInput),
+    )
+    console.log(isIncludesPasswordList)
+    if (isIncludesPasswordList) {
+      console.log('True')
+    } else {
+      console.log('False')
+    }
+  }
+
+  getWebsiteInput = event => {
+    this.setState({website: event.target.value})
+  }
+
+  getUserNameInput = event => {
+    this.setState({username: event.target.value})
+  }
+
+  getPasswordInput = event => {
+    this.setState({password: event.target.value})
+  }
+
+  gettingSearchPasswordsInput = e => {
+    this.setState({searchInput: e.target.value})
+    this.gettingSearchPasswords()
   }
 
   addPasswordByClick = event => {
@@ -19,7 +50,7 @@ class Passwords extends Component {
     const {website, username, password} = this.state
 
     const addNewPassword = {
-      id: uuidv4,
+      id: uuidv4(),
       website,
       username,
       password,
@@ -35,8 +66,9 @@ class Passwords extends Component {
 
   clickDelete = id => {
     const {passwordsList} = this.state
-    console.log(passwordsList, id)
-    // this.setState({passwordsList: passwordsList.filter(item => item.id !== id)})
+    const updatePasswordList = passwordsList.filter(item => item.id !== id)
+    console.log(updatePasswordList)
+    this.setState({passwordsList: updatePasswordList})
   }
 
   getNonEmptyList = () => {
@@ -66,20 +98,8 @@ class Passwords extends Component {
     </div>
   )
 
-  getWebsiteInput = event => {
-    this.setState({website: event.target.value})
-  }
-
-  getUserNameInput = event => {
-    this.setState({username: event.target.value})
-  }
-
-  getPasswordInput = event => {
-    this.setState({password: event.target.value})
-  }
-
   makeDisplayPasswords = () => {
-    this.setState(prevState => ({isShowPasswords: !prevState}))
+    this.setState(prevState => ({isShowPasswords: !prevState.isShowPasswords}))
   }
 
   render() {
@@ -172,6 +192,7 @@ class Passwords extends Component {
                   type="search"
                   placeholder="search"
                   className="input-search"
+                  onChange={this.gettingSearchPasswordsInput}
                 />
               </div>
             </div>

@@ -27,7 +27,12 @@ const PasswordItem = props => {
           <p className="text">{showStarsOrPassword}</p>
         </div>
       </div>
-      <button type="button" className="delete-container" onClick={deleteList()}>
+      <button
+        type="button"
+        testId="delete"
+        className="delete-container"
+        onClick={deleteList}
+      >
         <img
           src="https://assets.ccbp.in/frontend/react-js/password-manager-delete-img.png"
           alt="delete"
